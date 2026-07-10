@@ -1,0 +1,37 @@
+.awareness-list {
+  margin-top: var(--space-xl);
+  display: grid;
+  gap: 0;
+}
+
+.awareness-block {
+  display: grid;
+  grid-template-columns: minmax(8rem, 12rem) 1fr;
+  gap: 1.5rem 2rem;
+  padding-block: var(--space-lg);
+  border-top: 1px solid var(--line);
+}
+
+.awareness-block:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.awareness-block h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--accent-deep);
+}
+
+.awareness-block p {
+  color: var(--ink-muted);
+  font-size: 1.02rem;
+}
+
+@media (max-width: 700px) {
+  .awareness-block {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+}

@@ -1,0 +1,255 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, 32vw) 1fr;
+  grid-template-rows: 1fr auto auto auto;
+  grid-template-areas:
+    "intro visual mission"
+    "name  name    name"
+    "cta   .       meta"
+    "scroll scroll scroll";
+  align-items: end;
+  column-gap: 1.25rem;
+  row-gap: 1rem;
+  padding: calc(var(--nav-h) + 1.25rem) 1.5rem 1.75rem;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  inset: 12% 22% auto;
+  height: 48%;
+  background: radial-gradient(circle, rgba(0, 183, 194, 0.3), transparent 68%);
+  filter: blur(44px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-name {
+  grid-area: name;
+  z-index: 1;
+  justify-self: center;
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3.4rem, 12vw, 9rem);
+  line-height: 0.86;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+  color: var(--ink);
+  pointer-events: none;
+  margin-top: -12vh;
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 900ms var(--ease-out) 80ms,
+    transform 900ms var(--ease-out) 80ms;
+}
+
+.hero.is-ready .hero-name {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-name span {
+  display: inline;
+}
+
+.hero-name span + span {
+  margin-left: 0.18em;
+}
+
+.hero-visual {
+  grid-area: visual;
+  z-index: 2;
+  justify-self: center;
+  align-self: end;
+  width: min(100%, 360px);
+  aspect-ratio: 3 / 4;
+  border-radius: 1.25rem 1.25rem 2.5rem 2.5rem;
+  overflow: hidden;
+  box-shadow:
+    0 30px 60px rgba(11, 28, 31, 0.18),
+    0 0 0 1px rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  transform: translateY(36px) scale(0.97);
+  transition:
+    opacity 900ms var(--ease-out) 180ms,
+    transform 900ms var(--ease-out) 180ms;
+}
+
+.hero.is-ready .hero-visual {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.hero-copy {
+  z-index: 3;
+  max-width: 17.5rem;
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  line-height: 1.55;
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 800ms var(--ease-out) 280ms,
+    transform 800ms var(--ease-out) 280ms;
+}
+
+.hero.is-ready .hero-copy {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-intro {
+  grid-area: intro;
+  align-self: center;
+  justify-self: start;
+  padding-bottom: 8vh;
+}
+
+.hero-mission {
+  grid-area: mission;
+  align-self: center;
+  justify-self: end;
+  text-align: right;
+  padding-bottom: 8vh;
+}
+
+.hero-cta {
+  grid-area: cta;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-self: center;
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 800ms var(--ease-out) 380ms,
+    transform 800ms var(--ease-out) 380ms;
+}
+
+.hero.is-ready .hero-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-meta {
+  grid-area: meta;
+  z-index: 3;
+  justify-self: end;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+  opacity: 0;
+  transition: opacity 800ms var(--ease-out) 480ms;
+}
+
+.hero.is-ready .hero-meta {
+  opacity: 1;
+}
+
+.hero-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(0, 183, 194, 0.08);
+  }
+}
+
+.hero-scroll {
+  grid-area: scroll;
+  z-index: 3;
+  justify-self: end;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  opacity: 0;
+  transition: opacity 800ms var(--ease-out) 600ms;
+}
+
+.hero.is-ready .hero-scroll {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "visual"
+      "name"
+      "intro"
+      "mission"
+      "cta"
+      "meta"
+      "scroll";
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    padding-top: calc(var(--nav-h) + 1rem);
+    gap: 1.1rem;
+  }
+
+  .hero-name {
+    margin-top: -1.5rem;
+    font-size: clamp(2.6rem, 13vw, 4.2rem);
+  }
+
+  .hero-name span {
+    display: block;
+  }
+
+  .hero-name span + span {
+    margin-left: 0;
+  }
+
+  .hero-visual {
+    width: min(68vw, 280px);
+    align-self: center;
+  }
+
+  .hero-intro,
+  .hero-mission,
+  .hero-meta {
+    justify-self: center;
+    text-align: center;
+    max-width: 26rem;
+    padding-bottom: 0;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-scroll {
+    justify-self: center;
+  }
+}

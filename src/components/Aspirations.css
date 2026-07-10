@@ -1,0 +1,13 @@
+.aspirations {
+  background:
+    linear-gradient(180deg, transparent, rgba(0, 183, 194, 0.06) 40%, transparent);
+}
+
+.aspirations-text {
+  max-width: 44rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--ink-muted);
+  font-size: 1.05rem;
+}

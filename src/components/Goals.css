@@ -1,0 +1,53 @@
+.goals-columns {
+  margin-top: var(--space-xl);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.goals-col h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.goals-focus {
+  color: var(--accent-deep);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.goals-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.goals-col li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent);
+}
+
+.goals-col strong {
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.goals-col span {
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 760px) {
+  .goals-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

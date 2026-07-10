@@ -1,0 +1,64 @@
+.contact {
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 100%, rgba(0, 183, 194, 0.12), transparent 60%),
+    var(--bg-soft);
+}
+
+.contact-inner {
+  max-width: 40rem;
+}
+
+.contact-list {
+  margin-top: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.contact-list li {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.contact-list a {
+  font-weight: 600;
+  color: var(--ink);
+  transition: color 200ms ease;
+}
+
+.contact-list a:hover {
+  color: var(--accent-deep);
+}
+
+.contact-cv {
+  margin-top: var(--space-lg);
+  padding: 1.25rem 1.35rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  color: var(--ink-muted);
+  font-size: 0.98rem;
+}
+
+.contact-cv strong {
+  color: var(--ink);
+}
+
+@media (max-width: 520px) {
+  .contact-list li {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
