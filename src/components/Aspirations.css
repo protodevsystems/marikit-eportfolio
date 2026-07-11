@@ -1,13 +1,134 @@
 .aspirations {
-  background:
-    linear-gradient(180deg, transparent, rgba(0, 183, 194, 0.06) 40%, transparent);
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(4.5rem, 9vw, 6.5rem);
+  background: linear-gradient(155deg, #8b3a00 0%, #c44a08 40%, #e85d12 78%, #ff9800 100%);
+  color: #fff;
+  scroll-margin-top: calc(var(--nav-h) + 1rem);
 }
 
-.aspirations-text {
-  max-width: 44rem;
+.aspirations-glow {
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 45% 40% at 12% 18%, rgba(255, 236, 150, 0.4) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 35% at 90% 80%, rgba(139, 58, 0, 0.45) 0%, transparent 50%);
+  filter: blur(18px);
+}
+
+.aspirations-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.25fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.aspirations-brand {
+  position: sticky;
+  top: calc(var(--nav-h) + 1.25rem);
+}
+
+.aspirations-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 236, 150, 0.92);
+  margin-bottom: 0.65rem;
+}
+
+.aspirations-display {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 12vw, 8rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 0.85;
+  text-transform: uppercase;
+  margin: 0 0 1.15rem;
+  text-shadow: 0 12px 36px rgba(26, 20, 16, 0.22);
+}
+
+.aspirations-display em {
+  display: block;
+  font-style: normal;
+  font-size: 0.42em;
+  letter-spacing: 0.18em;
+  color: rgba(255, 236, 150, 0.85);
+  margin-top: 0.35rem;
+}
+
+.aspirations-lede {
+  max-width: 18rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.aspirations-steps {
   display: flex;
   flex-direction: column;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.aspirations-step {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
   gap: 1rem;
-  color: var(--ink-muted);
-  font-size: 1.05rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.aspirations-step:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.aspirations-step-index {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: rgba(255, 236, 150, 0.55);
+}
+
+.aspirations-when {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 236, 150, 0.95);
+  margin-bottom: 0.4rem;
+}
+
+.aspirations-step h3 {
+  font-family: var(--font-body);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 0.65rem;
+}
+
+.aspirations-step-copy > p:last-child {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 34rem;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .aspirations-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .aspirations-brand {
+    position: static;
+  }
 }

@@ -17,50 +17,57 @@ const channels = [
     value: 'linkedin.com/in/raphaelledpiosca',
     href: 'https://www.linkedin.com/in/raphaelledpiosca',
   },
-  {
-    label: 'Location',
-    value: 'Auckland, New Zealand',
-    href: null,
-  },
 ]
 
 export function Contact() {
   return (
-    <section id="contact" className="section contact">
-      <div className="container contact-inner">
-        <Reveal>
-          <span className="section-label">Get in touch</span>
-          <h2 className="section-title">Let&apos;s connect</h2>
-          <p className="section-lead">
-            I welcome networking opportunities, collaboration, and inquiries related to IT
-            support, service desk roles, or professional connections. Happy to connect with
-            fellow IT students, professionals, or potential employers.
+    <section id="contact" className="contact">
+      <div className="contact-shell container">
+        <Reveal className="contact-stage">
+          <div className="contact-stage-glow" aria-hidden="true" />
+          <span className="contact-label">Get in touch</span>
+          <h2 className="contact-display">
+            Let&apos;s
+            <br />
+            talk
+          </h2>
+          <p className="contact-lede">
+            Open to IT support and service desk opportunities, collaboration, and
+            professional connections across Aotearoa.
           </p>
+          <p className="contact-place">
+            <span aria-hidden="true" />
+            Auckland, New Zealand
+          </p>
+          <img
+            className="contact-portrait"
+            src="/images/hero-graduation.jpg"
+            alt=""
+            width={160}
+            height={160}
+            loading="lazy"
+          />
         </Reveal>
 
-        <Reveal delayClass="reveal-delay-1" as="ul" className="contact-list">
-          {channels.map((c) => (
-            <li key={c.label}>
-              <span className="contact-label">{c.label}</span>
-              {c.href ? (
+        <Reveal delayClass="reveal-delay-1" className="contact-panel">
+          <ul className="contact-channels">
+            {channels.map((c) => (
+              <li key={c.label}>
+                <span>{c.label}</span>
                 <a
                   href={c.href}
                   target={c.href.startsWith('http') ? '_blank' : undefined}
                   rel={c.href.startsWith('http') ? 'noreferrer' : undefined}
                 >
                   {c.value}
+                  <em aria-hidden="true">↗</em>
                 </a>
-              ) : (
-                <span>{c.value}</span>
-              )}
-            </li>
-          ))}
-        </Reveal>
-
-        <Reveal delayClass="reveal-delay-2" className="contact-cv">
-          <p>
-            <strong>CV</strong> — available on request. Reach out by email or LinkedIn and
-            I&apos;ll share the latest version.
+              </li>
+            ))}
+          </ul>
+          <p className="contact-cv">
+            CV available on request — reach out by email or LinkedIn and I&apos;ll share the
+            latest version.
           </p>
         </Reveal>
       </div>

@@ -1,37 +1,108 @@
-.awareness-list {
-  margin-top: var(--space-xl);
-  display: grid;
-  gap: 0;
+.awareness {
+  padding-block: clamp(4.5rem, 9vw, 6.5rem);
+  background: #fff;
+  scroll-margin-top: calc(var(--nav-h) + 1rem);
 }
 
-.awareness-block {
-  display: grid;
-  grid-template-columns: minmax(8rem, 12rem) 1fr;
-  gap: 1.5rem 2rem;
-  padding-block: var(--space-lg);
-  border-top: 1px solid var(--line);
+.awareness-head {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
-.awareness-block:last-child {
-  border-bottom: 1px solid var(--line);
-}
-
-.awareness-block h3 {
+.awareness-display {
   font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--accent-deep);
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0.15rem 0 1rem;
 }
 
-.awareness-block p {
+.awareness-lede {
+  max-width: 34rem;
+  font-size: 1.08rem;
+  line-height: 1.5;
   color: var(--ink-muted);
+}
+
+.awareness-mosaic {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+
+.awareness-tile {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.5rem, 3vw, 2.15rem);
+  min-height: 0;
+}
+
+.awareness-tile--lead {
+  grid-row: 1 / 3;
+  background:
+    radial-gradient(ellipse 80% 60% at 0% 100%, rgba(255, 152, 0, 0.18) 0%, transparent 55%),
+    #fff8f0;
+  border: 1px solid rgba(196, 74, 8, 0.12);
+}
+
+.awareness-tile--warm {
+  background: linear-gradient(160deg, #fff4e8, #ffe0b8);
+}
+
+.awareness-tile--deep {
+  background: linear-gradient(145deg, #8b3a00, #c44a08 55%, #e85d12);
+  color: #fff;
+}
+
+.awareness-tile-index {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-bottom: 0.65rem;
+  color: var(--accent-deep);
+  opacity: 0.45;
+}
+
+.awareness-tile--deep .awareness-tile-index {
+  color: #ffec96;
+  opacity: 0.55;
+}
+
+.awareness-tile h3 {
+  font-family: var(--font-body);
+  font-size: clamp(1.4rem, 2.2vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 0 0 0.9rem;
+}
+
+.awareness-tile p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+
+.awareness-tile--deep p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.awareness-tile--lead p {
   font-size: 1.02rem;
 }
 
-@media (max-width: 700px) {
-  .awareness-block {
+@media (max-width: 860px) {
+  .awareness-mosaic {
     grid-template-columns: 1fr;
-    gap: 0.65rem;
+  }
+
+  .awareness-tile--lead {
+    grid-row: auto;
   }
 }

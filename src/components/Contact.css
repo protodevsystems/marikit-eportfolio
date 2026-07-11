@@ -1,64 +1,182 @@
 .contact {
-  background:
-    radial-gradient(ellipse 70% 60% at 50% 100%, rgba(0, 183, 194, 0.12), transparent 60%),
-    var(--bg-soft);
+  padding-block: clamp(3.5rem, 7vw, 5rem);
+  background: var(--bg);
+  scroll-margin-top: calc(var(--nav-h) + 1rem);
 }
 
-.contact-inner {
-  max-width: 40rem;
+.contact-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 1rem;
+  min-height: min(58vh, 520px);
 }
 
-.contact-list {
-  margin-top: var(--space-xl);
+.contact-stage {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 1.15rem;
+  justify-content: flex-end;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  background: linear-gradient(145deg, #8b3a00 0%, #c44a08 40%, #ff9800 100%);
+  color: #fff;
+  min-height: 360px;
 }
 
-.contact-list li {
-  display: grid;
-  grid-template-columns: 6.5rem 1fr;
-  gap: 1rem;
-  align-items: baseline;
-  padding-bottom: 1.15rem;
-  border-bottom: 1px solid var(--line);
+.contact-stage-glow {
+  position: absolute;
+  inset: -30%;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 50% 45% at 70% 20%,
+    rgba(255, 236, 150, 0.45) 0%,
+    transparent 55%
+  );
+  filter: blur(18px);
+}
+
+.contact-label,
+.contact-display,
+.contact-lede,
+.contact-place {
+  position: relative;
+  z-index: 1;
 }
 
 .contact-label {
-  font-size: 0.78rem;
+  display: inline-block;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 236, 150, 0.95);
+  margin-bottom: 0.65rem;
+}
+
+.contact-display {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 11vw, 7.5rem);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 0.85;
+  text-transform: uppercase;
+  margin: 0 0 1.1rem;
+  text-shadow: 0 12px 36px rgba(26, 20, 16, 0.25);
+}
+
+.contact-lede {
+  max-width: 26rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.25rem;
+}
+
+.contact-place {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.contact-place span {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: #ffec96;
+  box-shadow: 0 0 0 4px rgba(255, 236, 150, 0.22);
+}
+
+.contact-portrait {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 1;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  object-position: center 18%;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 12px 32px rgba(26, 20, 16, 0.28);
+}
+
+.contact-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  background: #fff;
+  border: 1px solid rgba(26, 20, 16, 0.08);
+}
+
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contact-channels li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-block: 1.05rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-channels li:first-child {
+  padding-top: 0;
+}
+
+.contact-channels span {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-faint);
 }
 
-.contact-list a {
+.contact-channels a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
   font-weight: 600;
+  letter-spacing: -0.02em;
   color: var(--ink);
   transition: color 200ms ease;
 }
 
-.contact-list a:hover {
+.contact-channels a em {
+  font-style: normal;
+  opacity: 0.55;
+  transition: transform 200ms var(--ease-out);
+}
+
+.contact-channels a:hover {
   color: var(--accent-deep);
 }
 
+.contact-channels a:hover em {
+  transform: translate(2px, -2px);
+}
+
 .contact-cv {
-  margin-top: var(--space-lg);
-  padding: 1.25rem 1.35rem;
-  border-radius: var(--radius-md);
-  background: var(--bg-elevated);
-  border: 1px solid var(--line);
+  margin: 1.25rem 0 0;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+  line-height: 1.5;
   color: var(--ink-muted);
-  font-size: 0.98rem;
 }
 
-.contact-cv strong {
-  color: var(--ink);
-}
-
-@media (max-width: 520px) {
-  .contact-list li {
+@media (max-width: 800px) {
+  .contact-shell {
     grid-template-columns: 1fr;
-    gap: 0.25rem;
+    min-height: auto;
+  }
+
+  .contact-stage {
+    min-height: 320px;
   }
 }

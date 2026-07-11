@@ -1,3 +1,4 @@
+import { BrandMark } from './BrandMark'
 import './Footer.css'
 
 export function Footer() {
@@ -6,8 +7,11 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-inner">
-        <p>© {year} Raphaelle Piosca</p>
-        <p className="footer-note">ePortfolio · Auckland, New Zealand</p>
+        <a className="footer-brand" href="#top">
+          <BrandMark size={28} />
+          <span>Raphaelle Piosca</span>
+        </a>
+        <p className="footer-note">ePortfolio · Auckland, New Zealand · {year}</p>
       </div>
     </footer>
   )
