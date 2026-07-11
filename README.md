@@ -9,7 +9,7 @@ One-page ePortfolio for Raphaelle Piosca — IT professional based in Auckland, 
 **Following sections** keep the same orange language with compact imagery and distinct layouts:
 - **About** — text-forward editorial with small controlled photos (not full-bleed banners)
 - **Path** — sticky brand column + stepped milestone list on orange
-- **Self-awareness** — asymmetric mosaic (lead + warm + deep)
+- **Self-awareness** — full-width editorial rows (light / warm / deep), sized to content
 - **Work** — case-study intro with pull quote + letter-marked content grid
 - **Goals** — dual personal/professional boards (no center timeline)
 - **Contact** — split orange stage + white channel panel (small portrait accent)
