@@ -38,16 +38,17 @@ Open the URL Vite prints (usually `http://localhost:5173`).
 npm run build
 ```
 
-## Temporary hosting
+## Deploy (Vercel)
 
-Serve the static build from any machine with Node:
+1. Import `protodevsystems/marikit-eportfolio` at [vercel.com/new](https://vercel.com/new).
+2. Set **Framework Preset** to **Vite** (not Brunch).
+3. Confirm build settings:
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `npm install`
+4. Deploy. Later pushes to `main` redeploy automatically.
 
-```bash
-npm run build
-npx serve dist
-```
-
-Or drop the `dist/` folder onto Netlify Drop, Cloudflare Pages, GitHub Pages, or any static host.
+`vercel.json` in the repo locks these settings for Hobby / free accounts.
 
 ## Project structure
 
