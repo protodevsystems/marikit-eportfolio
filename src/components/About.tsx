@@ -34,38 +34,40 @@ export function About() {
           </div>
         </Reveal>
 
-        <div className="about-aside">
+        <aside className="about-aside">
           <Reveal delayClass="reveal-delay-1" className="about-stat">
             <strong>10+</strong>
             <span>Years bridging people and technology</span>
           </Reveal>
 
-          <div className="about-visual">
+          <div className="about-photos">
             <Reveal delayClass="reveal-delay-2" className="about-photo about-photo--coast">
               <img
                 src="/images/about-coast.jpg"
                 alt="Raphaelle Piosca on a New Zealand coast"
-                width={480}
-                height={560}
+                width={640}
+                height={800}
                 loading="lazy"
               />
             </Reveal>
-
             <Reveal delayClass="reveal-delay-3" className="about-photo about-photo--park">
               <img
                 src="/images/lifestyle-park.jpg"
                 alt="Raphaelle outdoors in a park setting"
-                width={360}
-                height={280}
+                width={640}
+                height={800}
                 loading="lazy"
               />
-              <p>
-                This ePortfolio shows growth as an IT professional — and the resilience behind
-                it.
-              </p>
             </Reveal>
           </div>
-        </div>
+
+          <Reveal delayClass="reveal-delay-3" className="about-note">
+            <p>
+              This ePortfolio shows growth as an IT professional — and the resilience behind
+              it.
+            </p>
+          </Reveal>
+        </aside>
       </div>
     </section>
   )

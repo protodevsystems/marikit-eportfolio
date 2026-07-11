@@ -49,16 +49,17 @@
 }
 
 .about-aside {
-  display: grid;
-  gap: 0.85rem;
-  padding-top: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding-top: 0.2rem;
 }
 
 .about-stat {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  padding: 0.35rem 0 0.85rem;
+  padding: 0.2rem 0 0.9rem;
   border-bottom: 3px solid var(--accent);
 }
 
@@ -79,14 +80,18 @@
   max-width: 13rem;
 }
 
-.about-visual {
-  position: relative;
-  min-height: 220px;
+/* Portrait duo — equal height frames, face-safe crops */
+.about-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  align-items: stretch;
 }
 
 .about-photo {
-  position: relative;
   overflow: hidden;
+  background: #e8dfd4;
+  aspect-ratio: 3 / 4;
 }
 
 .about-photo img {
@@ -96,42 +101,26 @@
   display: block;
 }
 
-.about-photo--coast {
-  height: 168px;
-  width: 88%;
-  margin-left: auto;
-}
-
 .about-photo--coast img {
-  object-position: center 28%;
-}
-
-.about-photo--park {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 2;
-  width: min(72%, 220px);
-  display: grid;
-  gap: 0;
-  background: linear-gradient(145deg, #c44a08, #ff9800);
-  padding: 0.45rem;
-  box-shadow: 0 14px 36px rgba(26, 20, 16, 0.18);
+  object-position: center 8%;
 }
 
 .about-photo--park img {
-  height: 96px;
-  object-position: center 30%;
+  object-position: center 5%;
 }
 
-.about-photo--park p {
+.about-note {
+  padding-left: 0.85rem;
+  border-left: 3px solid var(--accent);
+}
+
+.about-note p {
   margin: 0;
-  padding: 0.55rem 0.2rem 0.25rem;
-  font-size: 0.78rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  line-height: 1.35;
-  letter-spacing: -0.01em;
-  color: #fff;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
+  color: var(--ink);
 }
 
 @media (max-width: 900px) {
@@ -142,14 +131,6 @@
   .about-aside {
     max-width: 420px;
   }
-
-  .about-visual {
-    min-height: 240px;
-  }
-
-  .about-photo--coast {
-    height: 160px;
-  }
 }
 
 @media (max-width: 560px) {
@@ -157,7 +138,7 @@
     max-width: none;
   }
 
-  .about-photo--park {
-    width: min(78%, 240px);
+  .about-photos {
+    grid-template-columns: 1fr 1fr;
   }
 }
