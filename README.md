@@ -12,7 +12,7 @@ One-page ePortfolio for Raphaelle Piosca — IT professional based in Auckland, 
 - **Self-awareness** — full-width editorial rows (light / warm / deep), sized to content
 - **Work** — case-study intro with pull quote + letter-marked content grid
 - **Goals** — dual personal/professional boards (no center timeline)
-- **Contact** — split orange stage + white channel panel (small portrait accent)
+- **Contact** — split orange stage + white channel panel
 
 Typography: Outfit + Bebas Neue. Source footage also lives in `docs/kit1.mp4` / `docs/kit1.gif`.
 

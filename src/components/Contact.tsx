@@ -39,14 +39,6 @@ export function Contact() {
             <span aria-hidden="true" />
             Auckland, New Zealand
           </p>
-          <img
-            className="contact-portrait"
-            src="/images/hero-graduation.jpg"
-            alt=""
-            width={160}
-            height={160}
-            loading="lazy"
-          />
         </Reveal>
 
         <Reveal delayClass="reveal-delay-1" className="contact-panel">
