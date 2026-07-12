@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 
 /**
  * HeroVisual — single looping video over a smooth orange stage.
- * GIF is only used if the MP4 fails to play (never both at once).
+ * Poster/fallback match the video (kit1), never the graduation still.
  */
 export function HeroVisual() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -17,13 +17,13 @@ export function HeroVisual() {
         await video.play()
         console.log('[HeroVisual] video playing')
       } catch (err) {
-        console.log('[HeroVisual] video play failed, using still poster', err)
+        console.log('[HeroVisual] video play failed, using kit poster', err)
         setUseFallback(true)
       }
     }
 
     const onError = () => {
-      console.log('[HeroVisual] video error, using still poster')
+      console.log('[HeroVisual] video error, using kit poster')
       setUseFallback(true)
     }
 
@@ -46,7 +46,7 @@ export function HeroVisual() {
           loop
           playsInline
           preload="auto"
-          poster="/images/hero-graduation.jpg"
+          poster="/images/hero-kit-poster.jpg"
           aria-hidden="true"
         >
           <source src="/videos/kit1.mp4" type="video/mp4" />
@@ -54,7 +54,7 @@ export function HeroVisual() {
       ) : (
         <img
           className="hero-video"
-          src="/images/hero-graduation.jpg"
+          src="/images/hero-kit-poster.jpg"
           alt=""
           width={1280}
           height={720}

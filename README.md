@@ -62,4 +62,4 @@ docs/           # Source content and original assets
 
 ## Future motion / 3D
 
-Hero portrait lives in `HeroVisual` so a later React Three Fiber or animation treatment can replace the image without rewriting copy. Light CSS entrance and scroll reveals ship in v1.
+Hero media: looping `public/videos/kit1.mp4` with matching poster/fallback `public/images/hero-kit-poster.jpg` (never the graduation still). Light CSS entrance and scroll reveals ship in v1.
