@@ -2,6 +2,7 @@
   background: #1a1410;
   color: rgba(255, 255, 255, 0.72);
   padding-block: 1.75rem;
+  padding-inline: 0;
   border-top: 3px solid var(--accent);
 }
 

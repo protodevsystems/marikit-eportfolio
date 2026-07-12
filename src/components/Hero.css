@@ -93,7 +93,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: calc(var(--nav-h) + 1.25rem) clamp(1.75rem, 4.5vw, 3.5rem) 2.5rem;
+  padding: calc(var(--nav-h) + 1.25rem) var(--page-gutter) 2.5rem;
   color: #fff;
   opacity: 0;
   transform: translateX(-16px);
@@ -225,7 +225,7 @@
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 0;
-  margin: 1rem 1rem 1rem 0;
+  margin: 1rem var(--page-gutter) 1rem 0;
   padding: 1.5rem clamp(1.4rem, 2.8vw, 2rem) 2rem;
   background:
     linear-gradient(
@@ -354,12 +354,13 @@
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
+    padding-bottom: 1.25rem;
   }
 
   .hero-stage {
     min-height: min(72vh, 560px);
     transform: translateY(12px);
-    padding-bottom: 2rem;
+    padding: calc(var(--nav-h) + 0.85rem) var(--page-gutter) 1.75rem;
   }
 
   .hero.is-ready .hero-stage {
@@ -376,10 +377,10 @@
   }
 
   .hero-panel {
-    margin: 0;
-    border-radius: 1.75rem 1.75rem 0 0;
+    margin: 0 var(--page-gutter) 1.15rem;
+    border-radius: 1.5rem;
     transform: translateY(16px);
-    padding-bottom: 2.25rem;
+    padding: 1.4rem 1.35rem 1.75rem;
   }
 
   .hero.is-ready .hero-panel {
@@ -387,11 +388,15 @@
   }
 
   .hero-panel-top {
-    min-height: 0.5rem;
+    min-height: 0.35rem;
   }
 
   .hero-brand-name {
     font-size: clamp(3rem, 14vw, 4.75rem);
+  }
+
+  .hero-availability {
+    padding-bottom: 0.35rem;
   }
 }
 
@@ -403,6 +408,11 @@
 
   .hero-cta .btn {
     justify-content: center;
+  }
+
+  .hero-panel {
+    margin-bottom: 1.35rem;
+    padding: 1.35rem 1.25rem 1.6rem;
   }
 }
 

@@ -8,7 +8,7 @@
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 1.25rem;
-  padding: 2rem clamp(1.25rem, 3.5vw, 2.75rem) 1rem;
+  padding: 2rem var(--page-gutter) 1rem;
   pointer-events: none;
   opacity: 0;
   transform: translateY(-14px);
@@ -31,11 +31,18 @@
 }
 
 .nav.is-scrolled {
-  padding-top: 0.95rem;
-  padding-bottom: 0.95rem;
+  padding: 0.95rem var(--page-gutter);
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(18px);
   box-shadow: 0 1px 0 var(--line);
+}
+
+/* Desktop: sit links inside the frosted panel inset, not on its outer edge */
+@media (min-width: 961px) {
+  .nav:not(.is-scrolled):not(.is-open) {
+    padding-top: calc(1rem + 1.35rem);
+    padding-right: calc(var(--page-gutter) + clamp(1.4rem, 2.8vw, 2rem));
+  }
 }
 
 .nav-brand {
@@ -221,6 +228,7 @@
 @media (max-width: 900px) {
   .nav {
     grid-template-columns: 1fr auto;
+    padding-inline: var(--page-gutter);
   }
 
   .nav-menu {

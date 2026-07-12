@@ -187,4 +187,12 @@
   .project-grid {
     grid-template-columns: 1fr;
   }
+
+  .project-pull {
+    padding: 1.25rem 1.15rem;
+  }
+
+  .project-cell {
+    padding: 1.25rem 1.15rem;
+  }
 }

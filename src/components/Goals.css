@@ -34,7 +34,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  width: min(100% - 2rem, var(--max));
+  width: min(100% - (2 * var(--page-gutter)), var(--max));
   margin-inline: auto;
 }
 
@@ -142,5 +142,9 @@
 @media (max-width: 860px) {
   .goals-boards {
     grid-template-columns: 1fr;
+  }
+
+  .goals-board {
+    padding: 1.35rem 1.25rem;
   }
 }
