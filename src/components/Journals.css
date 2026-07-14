@@ -118,6 +118,10 @@
   hyphens: auto;
 }
 
+.journals-block p + p {
+  margin-top: 0.85rem;
+}
+
 @media (max-width: 720px) {
   .journals-item-trigger {
     grid-template-columns: 2.5rem minmax(0, 1fr) 1.25rem;

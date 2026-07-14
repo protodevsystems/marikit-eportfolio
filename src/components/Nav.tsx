@@ -3,9 +3,10 @@ import { BrandMark } from './BrandMark'
 import './Nav.css'
 
 const links = [
-  { href: '#project', label: 'Work' },
   { href: '#about', label: 'About' },
-  { href: '#aspirations', label: 'Path' },
+  { href: '#aspirations', label: 'Aspirations' },
+  { href: '#awareness', label: 'Self-awareness' },
+  { href: '#project', label: 'Work' },
   { href: '#goals', label: 'Goals' },
   { href: '#journals', label: 'Journals' },
 ]

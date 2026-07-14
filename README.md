@@ -8,7 +8,7 @@ One-page ePortfolio for Raphaelle Piosca — IT professional based in Auckland, 
 
 **Following sections** keep the same orange language with compact imagery and distinct layouts:
 - **About** — compact story column with sticky photo rail
-- **Path** — career aspirations as Immediate / 2–3 years / Longer-term steps on orange
+- **Aspirations** — career aspirations as Immediate / 2–3 years / Longer-term steps on orange
 - **Self-awareness** — Whetten-informed strengths, growth, and reflection bands
 - **Work** — ISO/IEC 27002 → NZISM security mapping case study
 - **Goals** — personal & professional learning goals (PPLG)
