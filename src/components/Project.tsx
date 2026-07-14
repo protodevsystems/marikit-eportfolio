@@ -10,23 +10,29 @@ type ProjectChapter = {
 const chapters: ProjectChapter[] = [
   {
     label: 'Challenge',
-    body: `The organisation needed a clearer way to understand how international security standards aligned with New Zealand-specific requirements. There was a gap between ISO/IEC 27002:2022 and the New Zealand Information Security Manual (NZISM). Without a clear mapping, demonstrating compliance and supporting security audits was inefficient.`,
+    body: `During my Cyber Security internship at CIANAA Technologies, the organisation needed a clearer way to understand how international security standards aligned with New Zealand-specific requirements. Specifically, there was a gap between the internationally recognised ISO/IEC 27002:2022 framework (a set of guidelines for information security controls) and the New Zealand Information Security Manual (NZISM), which government and many private organisations in New Zealand use as their security governance benchmark. Without a clear mapping between the two, it was difficult for the organisation to demonstrate compliance and support security audits efficiently.`,
   },
   {
     label: 'Goals',
     list: [
-      'Identify how ISO/IEC 27002:2022 controls corresponded to NZISM requirements',
-      'Create a practical, reusable mapping tool for governance and audit teams',
+      'Identify how ISO/IEC 27002:2022 controls corresponded to relevant NZISM requirements',
+      'Create a practical, reusable mapping tool that governance and audit teams could reference',
       'Support broader information security risk assessment and compliance activities',
     ],
   },
   {
     label: 'Approach',
-    body: `I developed the mapping tool end-to-end — researching both frameworks, gathering business requirements, cross-referencing controls and documenting gaps or partial matches, and writing findings so non-specialist audit stakeholders could use the tool. I also assisted with broader information security documentation and monitoring.`,
+    body: `I was directly responsible for developing this mapping tool. Throughout the process, I also assisted with maintaining broader information security documentation and monitoring, which gave me a fuller picture of how the mapping tool fit into the organisation's overall security governance activities.`,
+    list: [
+      'Researching both frameworks in depth to understand the structure, intent, and terminology used in each',
+      'Gathering business requirements by identifying what the organisation needed from a compliance and audit standpoint',
+      'Systematically mapping controls, cross-referencing each ISO/IEC 27002 control against its NZISM equivalent (where one existed), and documenting any gaps or partial matches',
+      'Documenting findings clearly, so the tool could be understood and used by people without deep technical security backgrounds',
+    ],
   },
   {
     label: 'Outcomes',
-    body: `The completed tool gave the organisation a clear reference for aligning security practices with both an international standard and NZISM — supporting more efficient audits and reducing ambiguity in compliance. Personally, it deepened my understanding of information security governance and reinforced the value of clear documentation.`,
+    body: `The completed mapping tool gave the organisation a clear, structured reference for aligning its security practices with both an internationally recognised standard and the New Zealand-specific NZISM framework. This supported more efficient security audits and governance reviews, and reduced the ambiguity previously involved in demonstrating compliance across two separate frameworks. On a personal level, this project deepened my understanding of information security governance and reinforced the value of clear documentation — a skill I've carried into every technical role since.`,
   },
 ]
 
@@ -41,16 +47,16 @@ export function Project() {
             ISO/IEC 27002
             <span>→ NZISM</span>
           </h2>
-          <p className="project-subtitle">Security mapping tool</p>
+          <p className="project-subtitle">Security Mapping Tool</p>
           <p className="project-meta">
-            Cyber Security Intern · CIANAA Technologies · Auckland · 2022
+            Cyber Security Intern · CIANAA Technologies · Auckland, New Zealand · 2022
           </p>
         </Reveal>
 
         <Reveal delayClass="reveal-delay-1" className="project-pull">
           <p>
-            Bridging an international security standard with New Zealand&apos;s NZISM — so
-            audits stop guessing and start aligning.
+            Bridging ISO/IEC 27002:2022 with New Zealand&apos;s NZISM — so audits stop guessing
+            and start aligning.
           </p>
         </Reveal>
       </div>

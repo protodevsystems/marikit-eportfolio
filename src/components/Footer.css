@@ -30,8 +30,11 @@
   color: #ffb300;
 }
 
-.footer-brand .brand-mark-dot {
-  fill: var(--accent-hot);
+.footer-brand .brand-mark {
+  display: block;
+  width: auto;
+  height: 1.75rem;
+  object-fit: contain;
 }
 
 .footer-note {

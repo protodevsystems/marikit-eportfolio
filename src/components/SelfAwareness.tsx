@@ -5,17 +5,25 @@ const chapters = [
   {
     title: 'Strengths',
     tone: 'light',
-    body: `One of my greatest strengths is communicating technical information clearly to non-technical audiences. Through Level 1 support at Alorica, I developed strong troubleshooting while ensuring customers felt heard. I'm highly adaptable — moving from administration to cybersecurity to Business Informatics has meant constantly learning new systems. Attention to detail and accurate documentation from AIS Global and Ivoclar Vivadent translate directly into service desk environments where ticketing integrity matters.`,
+    paragraphs: [
+      `One of my greatest strengths is my ability to communicate technical information clearly to non-technical audiences. Through roles such as my time at Alorica providing Level 1 technical support, I developed strong troubleshooting and problem-solving skills while ensuring customers felt heard and supported, even when dealing with frustrating technical issues. I'm also highly adaptable — moving from administrative work, to cybersecurity, to customer service, and now to further study in Business Informatics has required me to constantly learn new systems, tools, and ways of thinking, and I've consistently risen to that challenge.`,
+      `My attention to detail and commitment to documentation and accuracy, developed through roles like my administrative work at AIS Global and my technical encoding work at Ivoclar Vivadent, has taught me the importance of maintaining data integrity and following structured processes — skills that translate directly into service desk and IT support environments where accurate ticketing and documentation are critical.`,
+    ],
   },
   {
-    title: 'Growth',
+    title: 'Areas for Growth',
     tone: 'warm',
-    body: `The industry evolves quickly, so I'm deepening technical depth in network administration and cloud through CompTIA Network+ and Security+ alongside my Master's. Moving between industries and countries means continually building confidence in new professional environments — trusting that varied experience is an asset. Practical projects in this ePortfolio help me apply that knowledge more confidently in an IT-specific context.`,
+    paragraphs: [
+      `While I have strong foundational IT knowledge, I recognise that the IT industry evolves rapidly, and I need to continue building my technical depth, particularly in areas like network administration and cloud technologies, to stay competitive in the New Zealand IT job market. I'm currently addressing this through my CompTIA Network+ and Security+ studies, as well as my Master's degree, but I know this is an ongoing process rather than a destination.`,
+      `I also recognise that, as someone who has moved between industries and countries, I sometimes need to work on building confidence in a new professional environment — trusting that my varied experience is an asset rather than something to second-guess. My Master's studies, along with practical projects in this ePortfolio, are helping me apply my knowledge more confidently in an IT-specific context.`,
+    ],
   },
   {
     title: 'Reflection',
     tone: 'deep',
-    body: `I consistently take on new challenges — relocating, transitioning industries, returning to study later in my career. Those experiences shaped someone who values continuous learning, adaptability, and genuine care for the people I support. Going forward, I'm sharpening technical IT skills and building a career in service desk or IT support — bringing technical training together with strong interpersonal skills.`,
+    paragraphs: [
+      `Overall, I see myself as someone who has consistently taken on new challenges, whether that meant relocating to a new country, transitioning industries, or returning to study later in my career. These experiences have shaped me into someone who values continuous learning, adaptability, and genuine care for the people I work with and support. Going forward, I'm focused on sharpening my technical IT skills further and building a career in service desk or IT support, where I can bring together my technical training with the strong interpersonal skills I've developed throughout my working life.`,
+    ],
   },
 ]
 
@@ -25,10 +33,20 @@ export function SelfAwareness() {
       <div className="container awareness-head">
         <Reveal>
           <span className="section-label">Self-awareness</span>
-          <h2 className="awareness-display">Look inward</h2>
+          <h2 className="awareness-display">My journey</h2>
           <p className="awareness-lede">
-            Resilient, adaptable, and service-oriented — with a decade across customer
-            service, technical support, and IT-related roles.
+            Looking back at my journey so far, I would describe myself as a resilient,
+            adaptable, and service-oriented individual who has built a diverse skill set
+            across more than a decade in customer service, technical support, and IT-related
+            roles.
+          </p>
+          <p className="awareness-framework">
+            Using Whetten&apos;s self-awareness framework, I identified adaptability,
+            resilience and communication as my strongest competencies. The assessment also
+            highlighted that I need to continue developing confidence in unfamiliar
+            professional environments and deepen my technical expertise in networking and
+            cloud technologies. This insight has helped shape my personal learning goals and
+            career development plan.
           </p>
         </Reveal>
       </div>
@@ -48,7 +66,11 @@ export function SelfAwareness() {
                 </span>
                 <h3>{c.title}</h3>
               </header>
-              <p>{c.body}</p>
+              <div className="awareness-row-copy">
+                {c.paragraphs.map((p) => (
+                  <p key={p.slice(0, 48)}>{p}</p>
+                ))}
+              </div>
             </div>
           </Reveal>
         ))}

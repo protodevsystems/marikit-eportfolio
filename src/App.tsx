@@ -5,6 +5,7 @@ import { Aspirations } from './components/Aspirations'
 import { SelfAwareness } from './components/SelfAwareness'
 import { Project } from './components/Project'
 import { Goals } from './components/Goals'
+import { Journals } from './components/Journals'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
 
@@ -21,6 +22,7 @@ function App() {
         <SelfAwareness />
         <Project />
         <Goals />
+        <Journals />
         <Contact />
       </main>
       <Footer />

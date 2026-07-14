@@ -3,19 +3,19 @@ import './Aspirations.css'
 
 const milestones = [
   {
-    when: 'Now',
+    when: 'Immediate',
     title: 'Master’s in Business Informatics',
-    body: 'Completing my programme at ICL Graduate Business School — strengthening business analysis, project management, and strategic thinking on top of my IT foundation.',
+    body: `Complete my Master's in Business Informatics at ICL Graduate Business School, building on my IT foundation with stronger business analysis, project management, and strategic thinking capability.`,
   },
   {
     when: '2–3 years',
-    title: 'IT ops meets informatics',
-    body: 'Move from front-line technical support into IT business analysis, service delivery management, or systems support coordination.',
+    title: 'IT Ops × Business Informatics',
+    body: `Move from front-line technical support into a role that blends IT operations with business informatics — such as IT business analysis, service delivery management, or systems support coordination.`,
   },
   {
     when: 'Longer term',
-    title: 'Lead service management',
-    body: 'Grow into leadership within IT service management — combining technical grounding and cyber security exposure to help organisations run more securely and efficiently.',
+    title: 'Lead IT Service Management',
+    body: `Grow into a leadership position within IT service management, combining my technical grounding and cyber security exposure to help organisations run more securely and efficiently.`,
   },
 ]
 
@@ -28,11 +28,11 @@ export function Aspirations() {
         <Reveal className="aspirations-brand">
           <span className="aspirations-label">Looking ahead</span>
           <h2 className="aspirations-display">
-            Path
-            <em>forward</em>
+            Career
+            <em>aspirations</em>
           </h2>
           <p className="aspirations-lede">
-            From study to service leadership — grounded in support excellence.
+            From study, into blended IT operations, toward service management leadership.
           </p>
         </Reveal>
 

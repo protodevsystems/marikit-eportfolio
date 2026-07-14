@@ -131,14 +131,15 @@
 
 .hero-brand-mark {
   flex-shrink: 0;
-  width: clamp(4.25rem, 8vw, 5.75rem);
-  height: clamp(4.25rem, 8vw, 5.75rem);
-  color: #fff;
-  filter: drop-shadow(0 12px 28px rgba(26, 20, 16, 0.28));
-}
-
-.hero-brand-mark .brand-mark-dot {
-  fill: #ffc107;
+  width: auto;
+  height: clamp(4.75rem, 9.5vw, 6.5rem);
+  max-width: none;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  filter: drop-shadow(0 10px 24px rgba(26, 20, 16, 0.4));
 }
 
 .hero-brand-lockup {
@@ -318,11 +319,12 @@
 .hero-availability-title {
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: clamp(1.85rem, 2.6vw, 2.35rem);
+  font-size: clamp(1.45rem, 2.2vw, 2.15rem);
   letter-spacing: -0.035em;
   line-height: 1.12;
   color: var(--ink);
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+  white-space: nowrap;
 }
 
 .hero-availability-lead {

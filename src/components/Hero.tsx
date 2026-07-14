@@ -17,7 +17,7 @@ export function Hero() {
       <HeroVisual />
 
       <div className="hero-stage">
-        <div className="hero-stage-copy">
+          <div className="hero-stage-copy">
           <div className="hero-brand">
             <BrandMark className="hero-brand-mark" size={88} />
             <h1 className="hero-brand-lockup">
@@ -48,7 +48,7 @@ export function Hero() {
 
         <div className="hero-availability">
           <p className="hero-availability-label">
-            Available for
+            ePortfolio
             <span className="hero-availability-dot" aria-hidden="true" />
           </p>
           <h2 className="hero-availability-title">Service Desk &amp; IT Support</h2>
