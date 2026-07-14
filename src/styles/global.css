@@ -35,7 +35,7 @@
   --radius-md: 1.15rem;
   --max: 1120px;
   --nav-h: 5.5rem;
-  --hero-split: 55% 45%;
+  --hero-split: 52% 48%;
   --page-gutter: clamp(1.25rem, 4.5vw, 2.75rem);
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);

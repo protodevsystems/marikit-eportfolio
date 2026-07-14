@@ -41,11 +41,42 @@
   box-shadow: none;
 }
 
-/* Desktop: sit links inside the frosted panel inset */
+/* Desktop: pin links into the same column as the frost panel */
 @media (min-width: 961px) {
   .nav:not(.is-scrolled):not(.is-open) {
-    padding-top: calc(1rem + 1.35rem);
-    padding-right: calc(var(--page-gutter) + clamp(1.4rem, 2.8vw, 2rem));
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 1fr);
+    gap: 0;
+    padding: 1rem 0 0;
+  }
+
+  .nav:not(.is-scrolled):not(.is-open) .nav-desktop {
+    grid-column: 2;
+    justify-self: stretch;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 0;
+    margin-right: var(--page-gutter);
+    padding: 1.35rem clamp(1rem, 2vw, 1.65rem) 0;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .nav:not(.is-scrolled):not(.is-open) .nav-desktop a:not(.nav-cta) {
+    padding: 0.45rem 0.42rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+  }
+
+  .nav:not(.is-scrolled):not(.is-open) .nav-desktop a:not(.nav-cta)::after {
+    left: 0.42rem;
+    right: 0.42rem;
+  }
+
+  .nav:not(.is-scrolled):not(.is-open) .nav-cta {
+    margin-left: 0.25rem;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.68rem;
+    flex-shrink: 0;
   }
 }
 
