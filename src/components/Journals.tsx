@@ -157,10 +157,10 @@ const journals: Journal[] = [
 
 const peerPosts: Journal[] = [
   {
-    title: 'Peer Evaluation Feedback 1 — Presentation Leadership',
+    title: 'Peer Evaluation Feedback 1 — Ailyn Alcantara',
     sections: [
       {
-        label: 'Peer evaluation',
+        label: 'Peer evaluation · Ailyn Alcantara',
         body: [
           `I had the opportunity to work with Raphaelle Piosca across several group assignments in Innovation Design and Thinking, Enterprise Systems and Business Analysis, Project Management, and IT Service Management and Strategy. Throughout these projects, Raphaelle consistently demonstrated creativity, professionalism, and a strong commitment to producing high-quality work.`,
           `Raphaelle took the lead in designing and creating our PowerPoint presentations. She ensured that each presentation was visually appealing, well-organised, and aligned with the project requirements. Her attention to detail, effective use of visual elements, and ability to present complex information in a clear and engaging format significantly enhanced the overall quality of our group submissions.`,
@@ -195,10 +195,10 @@ const peerPosts: Journal[] = [
     ],
   },
   {
-    title: 'Peer Evaluation Feedback 2 — Professionalism & Leadership',
+    title: 'Peer Evaluation Feedback 2 — Ma Rosanne Celine Salvan Rigonan',
     sections: [
       {
-        label: 'Peer evaluation',
+        label: 'Peer evaluation · Ma Rosanne Celine Salvan Rigonan',
         body: [
           `Throughout this course, Raphaelle has consistently demonstrated the qualities of an outstanding Master's in Business Information Technology student. She approaches every task with professionalism, integrity, and a strong commitment to excellence. Her positive attitude, reliability, and willingness to contribute make her a valued member of the class. She consistently meets deadlines, comes well prepared, and maintains a high standard of work that reflects both academic discipline and professional responsibility.`,
           `Raphaelle is an excellent team player who communicates respectfully and effectively with peers. She actively listens to different perspectives, shares thoughtful insights, and encourages collaboration within the group. Her leadership qualities are evident in the way she supports her classmates, takes initiative when needed, and helps create an inclusive and productive learning environment. She demonstrates strong critical thinking, problem-solving abilities, and a genuine passion for applying business and information technology concepts to real-world situations.`,
